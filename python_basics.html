@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Syntax Examples</title>
+</head>
+<body>
+    <h1>Python Syntax Examples</h1>
+    
+    <h2>Lists</h2>
+    <p>Python lists are ordered collections of items. They can contain elements of different data types.</p>
+    
+    <h3>Creating a List</h3>
+    <pre>
+        <code>
+my_list = [1, 2, 3, 'four', 5.0]
+        </code>
+    </pre>
+    
+    <h3>Accessing List Elements</h3>
+    <pre>
+        <code>
+# Access the first element (index 0)
+first_element = my_list[0]
+
+# Access the last element (index -1)
+last_element = my_list[-1]
+        </code>
+    </pre>
+    
+    <h3>Modifying a List</h3>
+    <pre>
+        <code>
+# Append an element to the end
+my_list.append(6)
+
+# Insert an element at a specific index
+my_list.insert(3, 'new_element')
+
+# Remove an element by value
+my_list.remove(3)
+
+# Remove an element by index
+del my_list[1]
+        </code>
+    </pre>
+    
+    <h2>Dictionaries</h2>
+    <p>Python dictionaries are collections of key-value pairs. Each key is unique and maps to a value.</p>
+    
+    <h3>Creating a Dictionary</h3>
+    <pre>
+        <code>
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+        </code>
+    </pre>
+    
+    <h3>Accessing Dictionary Values</h3>
+    <pre>
+        <code>
+# Access value by key
+name = my_dict['name']
+
+# Using get() method with a default value
+country = my_dict.get('country', 'USA')
+        </code>
+    </pre>
+    
+    <h3>Modifying a Dictionary</h3>
+    <pre>
+        <code>
+# Adding a new key-value pair
+my_dict['job'] = 'Engineer'
+
+# Modifying an existing value
+my_dict['age'] = 31
+
+# Removing a key-value pair
+del my_dict['city']
+        </code>
+    </pre>
+
+</body>
+</html>

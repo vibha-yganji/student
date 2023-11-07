@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #game {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            background: #87CEEB;
+        }
+        #bird {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('bird.png') no-repeat;
+            background-size: 100%;
+        }
+        .pipe {
+            position: absolute;
+            width: 50px;
+            background: #2E8B57;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <div id="bird"></div>
+    </div>
+    <script>
+        const bird = document.getElementById("bird");
+        const game = document.getElementById("game");
+
+        let gravity = 2;
+        let velocity = 0;
+        let birdPosition = 150;
+        let gameInterval;
+
+        function startGame() {
+            gameInterval = setInterval(updateGameArea, 20);
+        }
+
+        function updateGameArea() {
+            if (birdPosition >= game.clientHeight - bird.clientHeight) {
+                clearInterval(gameInterval);
+                alert("Game Over");
+            } else {
+                velocity += gravity;
+                birdPosition += velocity;
+                bird.style.top = birdPosition + "px";
+            }
+        }
+
+        document.addEventListener("keydown", () => {
+            velocity = -20;
+        });
+
+        startGame();
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Pictionary Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #game-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #canvas-container {
+            display: flex;
+        }
+
+        canvas {
+            border: 2px solid #000;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #color-picker {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="canvas-container">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+        <div id="controls">
+            <div>
+                <label for="color-picker">Select a color:</label>
+                <input type="color" id="color-picker">
+            </div>
+            <button id="clear-button">Clear Canvas</button>
+            <div>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext("2d");
+        const colorPicker = document.getElementById("color-picker");
+        const clearButton = document.getElementById("clear-button");
+        const scoreElement = document.getElementById("score");
+        const colors = ["#000000", "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
+        let currentColor = colorPicker.value;
+        let drawing = false;
+        let lastX, lastY;
+        let score = 0;
+
+        colorPicker.addEventListener("input", (event) => {
+            currentColor = event.target.value;
+        });
+
+        clearButton.addEventListener("click", () => {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        canvas.addEventListener("mousedown", (event) => {
+            drawing = true;
+            [lastX, lastY] = [event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top];
+        });
+
+        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mouseup", () => drawing = false);
+        canvas.addEventListener("mouseout", () => drawing = false);
+
+        function draw(event) {
+            if (!drawing) return;
+
+            const x = event.clientX - canvas.getBoundingClientRect().left;
+            const y = event.clientY - canvas.getBoundingClientRect().top;
+
+            context.strokeStyle = currentColor;
+            context.lineWidth = 5;
+            context.lineJoin = "round";
+            context.beginPath();
+            context.moveTo(lastX, lastY);
+            context.lineTo(x, y);
+            context.closePath();
+            context.stroke();
+
+            [lastX, lastY] = [x, y];
+        }
+
+        // Example: Increase score when the user guesses a word correctly
+        function increaseScore() {
+            score += 10;
+            scoreElement.textContent = score;
+        }
+
+        // To add more game features like word guessing, you need additional code.
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Biopython API Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #0072b5;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biopython API Note</h1>
+
+    <p>
+        Biopython is a collection of tools and libraries for computational biology. It provides a wide range of functionalities for tasks such as sequence analysis, structural biology, and phylogenetics.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Sequence Handling: Biopython allows you to read, write, and manipulate biological sequence data, including DNA, RNA, and protein sequences.</li>
+        <li>Sequence Analysis: Perform various sequence analyses, such as sequence alignment, motif search, and translation.</li>
+        <li>Structure Analysis: Work with structural data, including PDB file parsing, structure alignment, and structure visualization.</li>
+        <li>Phylogenetics: Biopython provides tools for constructing and analyzing phylogenetic trees.</li>
+        <li>File Format Support: It supports various file formats commonly used in bioinformatics, such as FASTA, GenBank, BLAST, and more.</li>
+    </ul>
+
+    <h2>Example of Usage</h2>
+    <p>Here's a simple example of using Biopython to read and manipulate a DNA sequence:</p>
+    <pre>
+from Bio import Seq
+
+# Create a DNA sequence
+dna_sequence = Seq.Seq("AGCTGATCGATCGATC")
+
+# Calculate the reverse complement
+reverse_complement = dna_sequence.reverse_complement()
+
+print("Original Sequence: ", dna_sequence)
+print("Reverse Complement: ", reverse_complement)
+    </pre>
+
+    <h2>InstallationSteps (make sure to use pip!)</h2>
+    <pre>
+pip install biopython
+    </pre>
+    <p>Then, you can explore the comprehensive <a href="https://biopython.org/wiki/Documentation" target="_blank">documentation</a> to learn more about its features and how to use them in your bioinformatics projects.</p>
+
+    <p>Biopython is a valuable resource for anyone working in the field of computational biology and bioinformatics. It simplifies many common tasks and provides a platform for custom analysis and research.</p>
+
+    <h2>References - use these when you get home</h2>
+    <ul>
+        <li><a href="https://biopython.org" target="_blank">Biopython Official Website</a></li>
+        <li><a href="https://biopython.org/wiki/Main_Page" target="_blank">Biopython Wiki</a></li>
+    </ul>
+</body>
+</html>

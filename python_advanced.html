@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Libraries and Recursion</title>
+</head>
+<body>
+    <h1>Python Libraries and Recursion</h1>
+
+    <h2>Python Libraries</h2>
+    <p>Python provides a rich ecosystem of libraries for various tasks. Some commonly used libraries include:</p>
+    <ul>
+        <li><strong>NumPy:</strong> A library for numerical computing with support for arrays and matrices.</li>
+        <li><strong>Pandas:</strong> Used for data manipulation and analysis, particularly with data frames.</li>
+        <li><strong>Matplotlib:</strong> A popular library for creating data visualizations and plots.</li>
+        <li><strong>Scikit-Learn:</strong> A machine learning library with tools for classification, regression, clustering, and more.</li>
+        <li><strong>Requests:</strong> A library for making HTTP requests and working with APIs.</li>
+    </ul>
+
+    <h2>Recursion in Python</h2>
+    <p>Recursion is a programming technique where a function calls itself to solve a problem. In Python, you can use recursion to solve problems that can be broken down into smaller, similar subproblems. Here's an example of a recursive function to calculate the factorial of a number:</p>
+
+    <pre>
+<code>
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Example usage:
+result = factorial(5)
+print("Factorial of 5 is", result)
+</code>
+    </pre>
+
+    <p>This recursive function calculates the factorial of a number <code>n</code> by repeatedly calling itself with a smaller value until <code>n</code> becomes 0. The base case is when <code>n</code> is 0, and it returns 1. The recursive case multiplies <code>n</code> with the factorial of <code>n - 1</code>.</p>
+
+    <p>Recursion can be a powerful tool, but it's important to handle base cases and termination conditions to avoid infinite recursion.</p>
+
+    <h3>References</h3>
+    <p>Here are some references for further reading:</p>
+    <ul>
+        <li><a href="https://numpy.org/">NumPy Documentation</a></li>
+        <li><a href="https://pandas.pydata.org/">Pandas Documentation</a></li>
+        <li><a href="https://matplotlib.org/">Matplotlib Documentation</a></li>
+        <li><a href="https://scikit-learn.org/">Scikit-Learn Documentation</a></li>
+        <li><a href="https://docs.python-requests.org/en/latest/">Requests Library Documentation</a></li>
+    </ul>
+
+    <p>That's a basic HTML template for your notes on Python libraries and recursion. You can further customize it as needed and add more content to cover specific libraries or recursion examples.</p>
+</body>
+</html>

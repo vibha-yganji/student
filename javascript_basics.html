@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <h1>JavaScript Basics and Syntax</h1>
+
+    <h2>Variables and Data Types</h2>
+    <pre>
+        <code>
+            // Declare variables
+            var name = "John";
+            let age = 30;
+            const isStudent = true;
+
+            // Data types
+            let number = 42;           // Number
+            let text = "Hello, JS!";   // String
+            let isTrue = true;         // Boolean
+            let fruits = ["apple", "banana", "cherry"]; // Array
+            let person = {             // Object
+                firstName: "John",
+                lastName: "Doe"
+            };
+        </code>
+    </pre>
+
+    <h2>Functions</h2>
+    <pre>
+        <code>
+            // Function declaration
+            function greet(name) {
+                console.log("Hello, " + name + "!");
+            }
+
+            // Function call
+            greet("Alice");
+        </code>
+    </pre>
+
+    <h2>Conditional Statements</h2>
+    <pre>
+        <code>
+            let temperature = 25;
+
+            if (temperature > 30) {
+                console.log("It's hot outside.");
+            } else if (temperature <= 30 && temperature >= 20) {
+                console.log("It's a pleasant day.");
+            } else {
+                console.log("It's cold outside.");
+            }
+        </code>
+    </pre>
+
+    <h2>Loops</h2>
+    <pre>
+        <code>
+            // For loop
+            for (let i = 1; i <= 5; i++) {
+                console.log("Count: " + i);
+            }
+
+            // While loop
+            let count = 0;
+            while (count < 3) {
+                console.log("Iteration: " + count);
+                count++;
+            }
+        </code>
+    </pre>
+
+    <h2>Objects and Methods</h2>
+    <pre>
+        <code>
+            let person = {
+                firstName: "Alice",
+                lastName: "Johnson",
+                greet: function() {
+                    console.log("Hello, " + this.firstName + " " + this.lastName + "!");
+                }
+            };
+
+            person.greet();
+        </code>
+    </pre>
+
+    <h2>Event Handling</h2>
+    <pre>
+        <code>
+            // HTML button: <button id="myButton">Click Me</button>
+            let button = document.getElementById("myButton");
+
+            button.addEventListener("click", function() {
+                alert("Button clicked!");
+            });
+        </code>
+    </pre>
+
+    <!-- Add more sections as needed -->
+
+</body>
+</html>
