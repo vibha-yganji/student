@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+</head>
+<body>
+
+    <h1>Code Description</h1>
+    <ul>
+        <li>When you click on the "Load Country Info" button, it triggers an event.</li>
+        <li>The code prompts you to enter the name of a country.</li>
+        <li>The code then makes a GET request to the REST Countries API using the entered country name.</li>
+        <li>If the country is found in the API, it extracts information about the country, such as its capital, population, and region.</li>
+        <li>It also displays the country's flag.</li>
+        <li>If the country is not found or there is an error in the API request, appropriate messages are displayed.</li>
+    </ul>
+<pre>
+    <button id="loadCountryBtn">Load Country Info</button>
+    <div id="countryInfo"></div>
+    // Define the API endpoint for REST Countries
+const apiUrl = 'https://restcountries.com/v3.1/name/';
+
+// Get references to the button and the div for displaying the country information
+const loadCountryBtn = document.getElementById('loadCountryBtn');
+const countryInfoDiv = document.getElementById('countryInfo');
+
+// Add a click event listener to the button
+loadCountryBtn.addEventListener('click', () => {
+    // Prompt the user to enter a country name
+    const countryName = prompt('Enter a country name:');
+    
+    if (countryName) {
+        // Make a GET request to the REST Countries API
+        fetch(apiUrl + countryName)
+            .then((response) => response.json())
+            .then((data) => {
+                // Check if the API returned valid data
+                if (data.status === 404) {
+                    countryInfoDiv.innerHTML = 'Country not found.';
+                } else {
+                    // Extract the country information
+                    const country = data[0];
+
+                    // Create HTML to display the country information
+                    const countryHTML = `
+                        <h2>${country.name.common}</h2>
+                        <p>Capital: ${country.capital}</p>
+                        <p>Population: ${country.population}</p>
+                        <p>Region: ${country.region}</p>
+                        <img src="${country.flags.png}" alt="${country.name.common} Flag">
+                    `;
+
+                    // Display the country information in the div
+                    countryInfoDiv.innerHTML = countryHTML;
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                countryInfoDiv.innerHTML = 'An error occurred while fetching the data.';
+            });
+    }
+});
+</pre>
+</body>
+</html>
