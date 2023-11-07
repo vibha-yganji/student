@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Libraries and APIs</title>
+</head>
+<body>
+    <h1>I. Introduction</h1>
+    <h2>A. The prominence of Python in the programming world</h2>
+    <h2>B. The role of libraries and APIs in Python's success</h2>
+
+    <h1>II. Python Libraries: The Building Blocks</h1>
+    <h2>A. Definition of Python libraries</h2>
+    <h2>B. Overview of commonly used libraries</h2>
+    <ol>
+        <li>NumPy for numerical computing</li>
+        <li>Pandas for data manipulation</li>
+        <li>Matplotlib and Seaborn for data visualization</li>
+        <li>Requests for HTTP requests</li>
+        <li>TensorFlow and PyTorch for machine learning</li>
+    </ol>
+
+    <h1>III. Python APIs: Connecting to the World</h1>
+    <h2>A. What are APIs (Application Programming Interfaces)?</h2>
+    <h2>B. How Python makes API integration seamless</h2>
+    <h2>C. Real-world examples of Python-powered API interactions</h2>
+    <ol>
+        <li>Social media APIs for content sharing and analysis</li>
+        <li>E-commerce APIs for product listings and sales data</li>
+        <li>Geographic APIs for mapping and location-based services</li>
+    </ol>
+
+    <h1>IV. Advantages of Python Libraries and APIs</h1>
+    <h2>A. Accelerating development and reducing coding efforts</h2>
+    <h2>B. Enhancing data analysis and visualization</h2>
+    <h2>C. Enabling machine learning and artificial intelligence applications</h2>
+    <h2>D. Fostering innovation through third-party integrations</h2>
+
+    <h1>V. Challenges and Best Practices</h1>
+    <h2>A. Handling API rate limits and authentication</h2>
+    <h2>B. Keeping libraries and dependencies up-to-date</h2>
+    <h2>C. Ensuring data security and privacy in API interactions</h2>
+
+    <h1>VI. Case Studies</h1>
+    <h2>A. Highlighting success stories in diverse industries</h2>
+    <h2>B. Discussing the transformative impact of Python libraries and APIs</h2>
+
+    <h1>VII. The Future of Python Libraries and APIs</h1>
+    <h2>A. Exploring emerging trends and developments</h2>
+    <h2>B. The role of open-source collaboration in library and API evolution</h2>
+    <h2>C. Preparing for the challenges of a rapidly evolving technological landscape</h2>
+
+    <h1>VIII. Conclusion</h1>
+    <h2>A. Recap of the significance of Python libraries and APIs</h2>
+    <h2>B. Encouragement to embrace Python's versatility and innovation through library and API utilization</h2>
+    <h2>C. The promise of a future driven by Python's ever-expanding ecosystem of tools and possibilities</h2>
+
+    <p>This speech will provide a comprehensive understanding of the power and potential of Python libraries and APIs, making it clear that they are not just tools but gateways to unlocking innovation and efficiency in the world of technology and data.</p>
+    <pre>
+
+{
+    "cells": [
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# Reusing Code:\n",
+       "Reusing code is a fundamental concept in software development. There are two primary ways to achieve code reusability: defining functions and defining procedures.\n",
+       "# Defining Functions: \n",
+       "A function is a self-contained block of code that performs a specific task or calculation and can return a value or result.\n",
+       "# Importance of Functions:\n"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "def add(a, b):\n",
+       "    return a + b\n",
+       "\n",
+       "# Example usage of the function\n",
+       "result = add(3, 5)\n",
+       "print(\"Sum:\", result) "
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# Defining Procedures (or Subroutines):\n",
+       "Procedures are sets of instructions that can be executed sequentially and can be used to perform specific actions.\n"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "#Example\n",
+       "def print_welcome_message():\n",
+       "    print(\"Welcome to the program!\")"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# Importance of Procedures\n",
+       "In summary, defining functions and procedures in Python is essential for achieving code reusability, modularity, and maintainability in your software projects."
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# What are Libraries?\n",
+       "Libraries are collections of pre-written functions, classes, and modules that can be utilized to perform specific tasks or provide common functionalities. Developers can include these libraries in their code in order to save time and effort by reusing some code that has already been created and tested by others."
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# Ways to Import Libraries \n",
+       "The “import” keyword in python references an external library. “example”  can be replaced with the name of the library used. \n",
+       "1. Import a single module (import example)\n",
+       "2. Import specific variables and functions (from example import name)\n",
+       "3. Import with an alias (import example as e)\n",
+       "4. Import all variables (from example import*)\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# How to Use a Library\n",
+       "Once defined you can use functions + stored variables by prefixing. "
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "import math #import statement\n",
+       "result = math.sqrt(16) #prefixed function is sqrt"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "Examples of Common Libraries"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "#We can use NumPy (Numerical Python) for numerical operations: \n",
+       "import numpy as np\n",
+       "\n",
+       "arr = np.array([1, 2, 3, 4, 5])\n",
+       "mean = np.mean(arr)\n",
+       "print(mean)\n"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "#Turtle Graphics is used to create drawings\n",
+       "import turtle\n",
+       "\n",
+       "# Create a turtle screen\n",
+       "wn = turtle.Screen()\n",
+       "wn.bgcolor(\"white\")\n",
+       "\n",
+       "# Create a turtle\n",
+       "alex = turtle.Turtle()\n",
+       "\n",
+       "# Drawing a square\n",
+       "for _ in range(4):\n",
+       "    alex.forward(100)\n",
+       "    alex.right(90)\n",
+       "\n",
+       "# Close the window on click\n",
+       "wn.exitonclick()\n"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "#Flask for Web Development is used to build APIs and simple web applications. \n",
+       "from flask import Flask\n",
+       "\n",
+       "app = Flask(__name__)\n",
+       "\n",
+       "@app.route('/')\n",
+       "def hello_world():\n",
+       "    return 'Hello, World!'\n",
+       "\n",
+       "if __name__ == '__main__':\n",
+       "    app.run()\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "Popcorn Hack: Search up the documentation for the math library. Be ready to explain what its uses are + important functions/variables. Import the math library and use a prefixed function and prefixed variable (w/comments)."
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "Practice MCQ questions to ask students during talk: \n",
+       "\n",
+       "# 1. What is the benefit of using a programming library? \n",
+       "A. Programming libraries include procedures for common functions, such as exponents, which saves programmers from having to make such procedures themselves.\n",
+       "B. Programming libraries make it easy to translate code from one programming language to another.\n",
+       "C. Programming libraries allow people to derive code from a compiled program because they correspond between compiled code and high-level code.\n",
+       "D. Programming libraries allow users to send procedures from their own programs between each other\n",
+       "\n",
+       "# Correct Answer: A \n",
+       "\n",
+       "Explanation:\n",
+       "\n",
+       "(A) Libraries contain functions that are useful for most users, but that are not directly supported by the bare language. While a method such as an exponent function might be easy to write, saving the programmer from having to do so makes the programming process more efficient.\n",
+       "\n",
+       "(B) is incorrect because libraries are not designed for translating code.\n",
+       "\n",
+       "(C) is incorrect because libraries do not support decompiling; that must be handled by other programs.\n",
+       "\n",
+       "(D) is incorrect because libraries are created and managed by the language writers, not individual users\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "---\n",
+       "# 2. What is the purpose of the “import” keyword in Python?\n",
+       "To print output to the console\n",
+       "To bring modules or libraries into your program \n",
+       "To generate executable files from your code\n",
+       "To define new functions in your program\n",
+       "\n",
+       "# Correct Answer: B \n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "---\n",
+       "# 6. What type of procedures can be found in a software library?\n",
+       "Abstract procedures that have no specific functionality\n",
+       "User-defined procedures specific to a particular program \n",
+       "Already developed procedures that can be used in creating programs\n",
+       "Deprecated procedures that should no longer be used \n",
+       "\n",
+       "# Correct Answer: C\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "---\n",
+       "# DOCUMENTATION \n",
+       "Documentation of procedures is important--it provides a clear, structured guide for current and future users and ensures efficient execution of tasks. Without  documentation, libraries or the procedures become inaccessible to others, which doesn't allow collaboration and it creates unnecessary obstacles in  software development or any field that relies on shared knowledge and resources "
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# What is an API?\n",
+       "API (college board def): Application program interfaces (APIs) are specifications for how the procedures in a library behave and can be used. It is like a translator for computer programs. It helps different software systems understand and work with each other. It sets rules and tools for them to communicate and share information. This is how apps and services can work together and offer more features in our digital world."
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "# Import the requests library, which is used to make HTTP requests.\n",
+       "import requests\n",
+       "\n",
+       "# Define your OpenAI API key. Replace 'your_api_key_here' with your actual API key.\n",
+       "API_KEY = 'your_api_key_here'\n",
+       "\n",
+       "# Specify the endpoint URL for making API requests, in this case, the GPT-3 completions endpoint.\n",
+       "ENDPOINT = 'https://api.openai.com/v1/engines/davinci/completions'\n",
+       "\n",
+       "# Set up the HTTP headers for the request, including the 'Authorization' header with your API key.\n",
+       "headers = {\n",
+       "    'Authorization': f'Bearer {API_KEY}',\n",
+       "}\n",
+       "\n",
+       "# Define the data to be sent in the request.\n",
+       "# 'prompt' is the text used to seed the generated content.\n",
+       "# 'max_tokens' specifies the maximum length of the generated text (in this case, 50 tokens).\n",
+       "data = {\n",
+       "    'prompt': 'Once upon a time',\n",
+       "    'max_tokens': 50,\n",
+       "}\n",
+       "\n",
+       "# Make an HTTP POST request to the OpenAI API using the requests.post method.\n",
+       "# Pass the endpoint URL, headers, and JSON data as arguments.\n",
+       "response = requests.post(ENDPOINT, headers=headers, json=data)\n",
+       "\n",
+       "# Parse the response from the API, which contains the generated text.\n",
+       "# The generated text can be found in response.json()['choices'][0]['text'].\n",
+       "generated_text = response.json()['choices'][0]['text']\n",
+       "\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "Types: Operating System - connects software and your computer\n",
+       "#include <windows.h>\n",
+       "\n",
+       "int main() {\n",
+       "    HWND hwnd = CreateWindow(\n",
+       "        L\"STATIC\", L\"Hello, World!\",\n",
+       "        WS_OVERLAPPEDWINDOW,\n",
+       "        100, 100, 400, 200,\n",
+       "        NULL, NULL, NULL, NULL\n",
+       "    );\n",
+       "\n",
+       "    ShowWindow(hwnd, SW_SHOW);\n",
+       "    UpdateWindow(hwnd);\n",
+       "\n",
+       "    MSG msg;\n",
+       "    while (GetMessage(&msg, NULL, 0, 0)) {\n",
+       "        TranslateMessage(&msg);\n",
+       "        DispatchMessage(&msg);\n",
+       "    }\n",
+       "\n",
+       "    return 0;\n",
+       "}\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "This code is a basic Windows application written in C/C++ that opens a window displaying the text \"Hello, World!\" using the Windows API. It sets up the window's properties, makes it visible, and processes messages to keep the application responsive."
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "---\n",
+       "Types: Other - There are many other API types depending on use. APIs may have slightly different code needed and API calls, this is why it is so important to document code. You can find more information through online documentation.\n",
+       "\n",
+       "Some APIs are not available to the public or are restricted to certain groups. There are Open APIs, Partner APIs (within organizations), Internal (Private) APIs."
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "# Popcorn Hack (API)\n",
+       "Problem: You want to create a Python program that fetches a random fact from the Cat Facts API and displays it. Write a Python script that retrieves a random cat fact from the API and prints it to the console.\n",
+       "\n",
+       "Assumptions/Hints:\n",
+       "You can make an HTTP GET request to the API using the requests library.\n",
+       "The API endpoint for fetching a random cat fact is: https://meowfacts.herokuapp.com/1.\n",
+       "After getting the response, you can extract the fact from the JSON response.\n"
+      ]
+     },
+     {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+       "import requests\n",
+       "\n",
+       "# Define the API endpoint for cat facts\n",
+       "API_URL = 'https://meowfacts.herokuapp.com/1'\n",
+       "\n",
+       "# Make an HTTP GET request to the API\n",
+       "response = requests.get(API_URL)\n",
+       "\n",
+       "# Check if the request was successful (status code 200)\n",
+       "if response.status_code == 200:\n",
+       "    # Parse the JSON response to get the cat fact\n",
+       "    cat_fact = response.json()['data'][0]\n",
+       "    \n",
+       "    # Print the cat fact\n",
+       "    print(\"Random Cat Fact: \" + cat_fact)\n",
+       "else:\n",
+       "    print(\"Failed to retrieve a cat fact. Please try again later.\")\n"
+      ]
+     },
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+       "---\n",
+       "# Homework\n",
+       "1.  Research 3 different libraries in python. Explain their purpose as well as two of your favorite variables/functions in each. Type out your response.\n",
+       "\n",
+       "2. Research an API. What is something unique about it that you learned in the documentation? What type of an API is it? What does it do? Brainstorm a potential scenario. Type out your response.\n",
+       "\n",
+       "2. Import a data manipulation library and use a prefixed function and prefixed variable (w/comments).\n"
+      ]
+     }
+    ],
+    "metadata": {
+     "kernelspec": {
+      "display_name": "Python 3 (ipykernel)",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+       "name": "ipython",
+       "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.10.12"
+     }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 2
+   }
+    </pre>
+
+</body>
+</html>
+
+
